@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta name="viewport"
-	content="width=device-width; user-scalable=no;initial-scale=1" />
+	content="width=device-width, user-scalable=no, initial-scale=1" />
 <meta http-equiv="Content-type" content="text/html; charset=utf-8">
 <title>通讯录</title>
 
@@ -10,78 +10,84 @@
 	type="text/css">
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="jquery.mobile/jquery-1.7.2.min"></script>
+<script type="text/javascript" src="init.js"></script>
 <script type="text/javascript"
 	src="jquery.mobile/jquery.mobile-1.3.1.js"></script>
 
 </head>
-<body data-role="page" id="page-index" class="type-home">
-	<div data-role="content">
-
-
-		<div class="content-secondary">
-
-			<div id="jqm-homeheader">
-				<h1 id="jqm-logo">
-					<img src="docs/assets/images/jquery-logo.png"
-						alt="jQuery Mobile Framework" />
-				</h1>
-				<p>A Touch-Optimized Web Framework for Smartphones &amp; Tablets</p>
-				<p id="jqm-version">Beta Release</p>
-			</div>
-
-
-			<p class="intro">
-				<strong>Welcome.</strong> Browse the jQuery Mobile components and
-				learn how to make rich, accessible, touch-friendly websites and
-				apps.
-			</p>
-			<nav>
-				<ul id="demoContainer" data-role="listview" data-filter="true"
-					data-filter-placeholder="Search..." data-inset="true"
-					data-theme="c" data-dividertheme="b">
-					<li data-role="list-divider">demos</li>
-				</ul>
-			</nav>
-			<ul data-role="listview" data-inset="true" data-theme="c"
-				data-dividertheme="f">
-				<li data-role="list-divider">Overview</li>
-				<li><a href="docs/about/intro.html">Intro to jQuery Mobile</a></li>
-				<li><a href="docs/about/features.html">Features</a></li>
-				<li><a href="docs/about/accessibility.html">Accessibility</a></li>
-				<li><a href="docs/about/platforms.html">Supported platforms</a></li>
+<body>
+	<div data-role="page" id="page-phone">
+		<div data-role="header">
+			<h3>通话记录</h3>
+		</div>
+		<div data-role="content">
+			<ul class="content-container" data-role="listview" data-filter="true"
+				data-filter-placeholder="联系人搜索" data-theme="c">
 			</ul>
-
-
 		</div>
-		<!--/content-primary-->
-
-		<div class="content-primary">
-			<nav>
-				<ul data-role="listview" data-inset="true" data-theme="c"
-					data-dividertheme="b">
-					<li data-role="list-divider">Components</li>
-					<li><a href="docs/pages/index.html">Pages &amp; dialogs</a></li>
-					<li><a href="docs/toolbars/index.html">Toolbars</a></li>
-					<li><a href="docs/buttons/index.html">Buttons</a></li>
-					<li><a href="docs/content/index.html">Content formatting</a></li>
-					<li><a href="docs/forms/index.html">Form elements</a></li>
-					<li><a href="docs/lists/index.html">List views</a></li>
-
-					<li data-role="list-divider">API</li>
-					<li><a href="docs/api/globalconfig.html">Configuring
-							defaults</a></li>
-					<li><a href="docs/api/events.html">Events</a></li>
-					<li><a href="docs/api/methods.html">Methods &amp;
-							Utilities</a></li>
-					<li><a href="docs/api/mediahelpers.html">Responsive Layout</a></li>
-					<li><a href="docs/api/themes.html">Theme framework</a></li>
-				</ul>
-			</nav>
+		<div data-role="footer" class="footer-docs" data-theme="a" data-position="fixed">
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="#page-phone" data-role="button" data-icon="delete" data-iconpos="top">拨号</a>
+				<a href="#page-contacts" data-role="button" data-icon="delete" data-iconpos="top">联系人</a>
+                <a href="#page-messages" data-role="button" data-icon="delete" data-iconpos="top">信息</a>
+                <a href="#setting" data-role="button" data-icon="gear" data-iconpos="top">设置</a>
+			</div>
 		</div>
 	</div>
-
-	<div data-role="footer" class="footer-docs" data-theme="c">
-		<p>&copy; 2011 The jQuery Project</p>
+	<div data-role="page" id="page-contacts">
+		<div data-role="header">
+			<h3>联系人</h3>
+		</div>
+		<div data-role="content">
+			<ul class="content-container" data-role="listview" data-filter="true"
+				data-filter-placeholder="联系人搜索" data-theme="c">
+			</ul>
+		</div>
+		<div data-role="footer" class="footer-docs" data-theme="a" data-position="fixed">
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="#page-phone" data-role="button" data-icon="delete" data-iconpos="top">拨号</a>
+				<a href="#page-contacts" data-role="button" data-icon="delete" data-iconpos="top">联系人</a>
+                <a href="#page-messages" data-role="button" data-icon="delete" data-iconpos="top">信息</a>
+                <a href="#setting" data-role="button" data-icon="gear" data-iconpos="top">设置</a>
+			</div>
+		</div>
 	</div>
+	<div data-role="page" id="page-messages">
+		<div data-role="header">
+			<h3>短消息</h3>
+		</div>
+		<div data-role="content">
+			<ul class="content-container" data-role="listview" data-filter="true"
+				data-filter-placeholder="信息搜索" data-theme="c">
+			</ul>
+		</div>
+		<div data-role="footer" class="footer-docs" data-theme="a" data-position="fixed">
+			<div data-role="controlgroup" data-type="horizontal">
+				<a href="#page-phone" data-role="button" data-icon="delete" data-iconpos="top">拨号</a>
+				<a href="#page-contacts" data-role="button" data-icon="delete" data-iconpos="top">联系人</a>
+                <a href="#page-messages" data-role="button" data-icon="delete" data-iconpos="top">信息</a>
+                <a href="#setting" data-role="button" data-icon="gear" data-iconpos="top">设置</a>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="page-setting">
+		<div data-role="header">
+			<h3>个人中心</h3>
+		</div>
+		<div data-role="content">
+			<ul class="content-container" data-role="listview" data-filter="true"
+				data-filter-placeholder="联系人搜索" data-theme="c">
+			</ul>
+		</div>
+		<div data-role="footer" class="footer-docs" data-theme="a" data-position="fixed">
+			<div data-role="controlgroup" data-type="horizontal" style="width:100%;align:center">
+				<a href="#page-phone" data-role="button" data-icon="delete" data-iconpos="top">拨号</a>
+				<a href="#page-contacts" data-role="button" data-icon="delete" data-iconpos="top">联系人</a>
+                <a href="#page-messages" data-role="button" data-icon="delete" data-iconpos="top">信息</a>
+                <a href="#page-setting" data-role="button" data-icon="gear" data-iconpos="top">设置</a>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="app.js"></script>
 </body>
 </html>
